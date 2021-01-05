@@ -4,14 +4,13 @@ import "firebase/firestore";
 import "firebase/storage";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBS_ZpuEOpDegNF6mj_mI7zw_QkfBsjXEA",
-  authDomain: "buyfy-batch-02.firebaseapp.com",
-  projectId: "buyfy-batch-02",
-  storageBucket: "buyfy-batch-02.appspot.com",
-  messagingSenderId: "894474728255",
-  appId: "1:894474728255:web:e49e59be1839b00c1dd98a",
+  apiKey: "AIzaSyBxZTUKZu3kNsFmE7FY4GJ-2GZVrpgwJhg",
+  authDomain: "buyfy-app.firebaseapp.com",
+  projectId: "buyfy-app",
+  storageBucket: "buyfy-app.appspot.com",
+  messagingSenderId: "1008227116930",
+  appId: "1:1008227116930:web:96c7d52109d29208e5919b"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
