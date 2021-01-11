@@ -14,6 +14,7 @@ export var uploadProduct = (productObj) => async () => {
     //  cb - file state,
     //  cb - error,
     //  cb - will trigger after file upload)
+
     fileListener.on(
       "state_changed",
       (snapshot) => {
@@ -26,6 +27,7 @@ export var uploadProduct = (productObj) => async () => {
       async () => {
         //will trriger after completion
         var downloadURL = await imageRef.getDownloadURL();
+        console.log(downloadURL)
 
         //2 - modify productObj with coverPhoto url and createdAt
         productObj.coverPhoto = downloadURL;

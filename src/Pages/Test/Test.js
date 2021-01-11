@@ -63,7 +63,10 @@ const Test = ({uploadProduct}) => {
           value={quantity}
         />
         <br />
-        <input onChange={(e) => setCoverPhoto(e.target.files[0])} type="file" placeholder="cover photo" />
+        {/* in case of input type = "file" e.target.value gives the path of file which is selected.we want to select file so write e.target.files */}
+        <input onChange={(e) => {console.log(e.target.files[0])
+          setCoverPhoto(e.target.files[0])
+          }} type="file" placeholder="cover photo" />
         <button type="submit">submit</button>
       </form>
       <Cart/>
