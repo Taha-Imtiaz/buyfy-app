@@ -45,7 +45,7 @@ export var uploadProduct = (productObj) => async () => {
 };
 
 
-
+//fetch all products
 export var fetchProducts = () => async (dispatch) => {
   try {
     var query = await firestore.collection("products").get();
