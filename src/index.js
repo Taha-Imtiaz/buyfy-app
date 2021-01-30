@@ -10,6 +10,7 @@ import history from "./history/history";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* pass our own history which is created in history.js */}
     <Router history={history}>
       <Provider store={store}>
         <App />

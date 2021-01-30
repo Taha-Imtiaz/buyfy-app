@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 const OrderForm = ({ user }) => {
+  //set  reciever info
   var [fullName, setFullName] = useState("");
   var [email, setEmail] = useState("");
   var [phone, setPhone] = useState("");
