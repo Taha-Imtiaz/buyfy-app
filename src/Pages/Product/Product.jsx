@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import { connect } from 'react-redux';
-import { fetchSpecificProduct } from './../../Redux/product/productActions';
-import ProductCard from './../../Components/ProductCard/ProductCard';
+import { fetchSpecificProduct } from '../../Redux/product/productActions';
+import ProductCard from '../../Components/ProductCard/ProductCard';
 
 const Product = ({fetchSpecificProduct, match: {params: {productId}}}) => {
     var [product, setProduct] = useState({})

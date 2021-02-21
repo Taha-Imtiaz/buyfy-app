@@ -22,6 +22,7 @@ function App({ firebaseAuthListener }) {
     <div>
       <Navbar/>
       <Switch>
+        <div className="pagesContainer">
         <Route path="/" component={Home} exact />
         <Route path="/authentication" component={Authtentication} />
         <Route path="/categories" component={Category} />
@@ -29,6 +30,7 @@ function App({ firebaseAuthListener }) {
         <Route path="/product/:productId" component={Product} />
         <Route path="/checkout/:orderId" component={Checkout} />
         <Route path="/test" component={Test} />
+        </div>
       </Switch>
     </div>
   );

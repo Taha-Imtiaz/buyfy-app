@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import CheckoutListItem from './../CheckoutListItem/CheckoutListItem';
+import CheckoutListItem from '../CheckoutListItem/CheckoutListItem';
 
 const CheckoutList = ({cartItems}) => {
     console.log(cartItems)

@@ -1,0 +1,7 @@
+.category-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background-color: limegreen; */
+    row-gap: 50px;
+
+}

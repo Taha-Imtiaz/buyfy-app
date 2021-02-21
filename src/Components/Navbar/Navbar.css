@@ -1,12 +1,20 @@
 .navbar {
   width: 100vw;
-  height: 12vh;
+  height: var(--navbar-height);
   background-color: lightgray;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr repeat(3, min-content);
+  padding: 0 80px;
+  align-content: center;
+  column-gap: 20px;
+  font-size: 62.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
 }
 
-.navItemContainer {
+/* .navItemContainer {
   display: flex;
   align-items: center;
 }
@@ -21,4 +29,4 @@
   align-items: center;
   padding: 0 50px;
   box-sizing: border-box;
-}
+} */

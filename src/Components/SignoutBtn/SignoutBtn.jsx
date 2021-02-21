@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { signout } from './../../Redux/auth/authActions';
+import { signout } from '../../Redux/auth/authActions';
 
 const SignoutBtn = ({signout}) => {
     return (

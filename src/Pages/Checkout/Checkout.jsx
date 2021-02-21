@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import CheckoutList from './../../Components/CheckoutList/CheckoutList';
+import CheckoutList from '../../Components/CheckoutList/CheckoutList';
 import { connect } from 'react-redux';
-import { calculateTotal } from './../../utility/checkout';
-import OrderForm from './../../Components/OrderForm/OrderForm';
+import { calculateTotal } from '../../utility/checkout';
+import OrderForm from '../../Components/OrderForm/OrderForm';
 
 const Checkout = ({total}) => {
     var [shipFormShown, setShipFormShown] = useState(false)

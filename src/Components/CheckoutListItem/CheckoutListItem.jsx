@@ -4,9 +4,9 @@ import {
   addProductToCart,
   removeProductFromCart,
   deleteProuctFromCart
-} from "./../../Redux/cart/cartActions";
+} from "../../Redux/cart/cartActions";
 
-const CartListIem = ({
+const CheckoutListItem = ({
   removeProductFromCart,
   addProductToCart,
   deleteProuctFromCart,
@@ -32,4 +32,4 @@ var actions = {
   deleteProuctFromCart
 };
 
-export default connect(null, actions)(CartListIem);
+export default connect(null, actions)(CheckoutListItem);
