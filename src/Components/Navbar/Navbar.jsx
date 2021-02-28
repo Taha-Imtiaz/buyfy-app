@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { signout } from "../../Redux/auth/authActions";
+import Cart from "../Cart/Cart";
 import Header from "../Header/Header";
 import "./Navbar.css";
 
@@ -17,12 +18,22 @@ const MenuItem = ({children,to = "#", ...restProps}) => (
 )
 
 const Navbar = ({auth,signout}) => {
+  var [isNavbarVisible, setNavbarVisibility] = useState(false)
   return (
     <div className="navbar">
     
    <MenuItem to = "/">LOGO</MenuItem>
    <MenuItem to = "/categories">SHOP</MenuItem>
-   <MenuItem>CART</MenuItem>
+   <MenuItem to = "/test" >TEST</MenuItem>
+   <div>
+   <Header style={{cursor:"pointer", display:"inline"}}
+    fontSize = {24} fontWeight = "bold"
+    onClick = {() => setNavbarVisibility(!isNavbarVisible)}>
+      CART
+      </Header>
+  {isNavbarVisible ? <Cart/> : null}
+
+   </div>
   {auth ? <MenuItem onClick = {signout} to = "/authentication">LOGOUT</MenuItem>:  <MenuItem to = "/authentication">LOGIN</MenuItem>}
 
    

@@ -85,7 +85,7 @@ const Test = ({uploadProduct}) => {
 {/* Button */}
 {/* <Button fontSize = {32} fontWeight = "bold" background = "orange" >Click Me And Click me again!</Button> */}
 
-<ProductCard/>
+{/* <ProductCard/> */}
 
     </div>
   );

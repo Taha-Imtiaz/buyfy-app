@@ -18,13 +18,13 @@ const fontWeightEstimator = (weightStr) => {
     }
 }
 
-const Paragraph = ({children, fontSize = 16, fontWeight = "regular", color = "black", style = {}}) => {
+const Paragraph = ({children, fontSize = 16, fontWeight = "regular", color = "black", style = {},...restProps}) => {
     let fontWeightValue =fontWeightEstimator(fontWeight)
     let fontSizeValue = fontSize/10;
     console.log(fontSizeValue)
 
     return (
-        <div className = "paragraph" style={{fontWeight:fontWeightValue, fontSize: `${fontSizeValue}em`, color,  ...style}}>
+        <div {...restProps} className = "paragraph" style={{fontWeight:fontWeightValue, fontSize: `${fontSizeValue}em`, color,  ...style}}>
          {  children}
         </div>
     )
