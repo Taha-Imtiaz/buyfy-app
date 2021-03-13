@@ -8,7 +8,6 @@ import { REMOVE_USER, SET_USER } from "./authContstants";
 import firebase from "./../../Firebase/Firebase";
 import history from "../../history/history";
 
-
 export var setUser = (user) => ({
   type: SET_USER,
   payload: {
@@ -36,7 +35,7 @@ export var signup = ({ email, password, fullName }) => async (dispatch) => {
     await firestore.collection("users").doc(uid).set(userInfo);
 
     //navigate to home page
-    history.push('/')
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
@@ -46,8 +45,8 @@ export var signin = ({ email, password }) => async (dispatch) => {
   try {
     //signin user with auth
     await auth.signInWithEmailAndPassword(email, password);
-     //navigate to home page
-     history.push('/')
+    //navigate to home page
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
@@ -77,12 +76,14 @@ export var googleSignin = () => async (dispatch) => {
         createdAt: serverTimestamp(),
       };
       await firestore.collection("users").doc(uid).set(userInfo);
+      
     }
+    //navigate to home page
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
 };
-
 
 //app auth state (centralize auth manager for our app)
 export var firebaseAuthListener = () => async (dispatch) => {

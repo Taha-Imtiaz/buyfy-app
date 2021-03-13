@@ -6,8 +6,9 @@ import Header from "../../Components/Header/Header";
 import Paragraph from "../../Components/Paragraph/Paragraph";
 import Button from "../../Components/Button/Button";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import { openModal } from "../../Redux/modal/modalActions";
 
-const Test = ({uploadProduct}) => {
+const Test = ({uploadProduct,openModal}) => {
   var [category, setCategory] = useState("");
   var [title, setTitle] = useState("");
   var [cost, setCost] = useState("");
@@ -70,7 +71,7 @@ const Test = ({uploadProduct}) => {
         <input onChange={(e) => setCoverPhoto(e.target.files[0])} type="file" placeholder="cover photo" />
         <button type="submit">submit</button>
       </form> */}
-      <Cart/>
+      {/* <Cart/> */}
 
       {/* Header */}
       {/* <Header fontSize = {32} fontWeight = "bold">This is my Header</Header>
@@ -86,13 +87,18 @@ const Test = ({uploadProduct}) => {
 {/* <Button fontSize = {32} fontWeight = "bold" background = "orange" >Click Me And Click me again!</Button> */}
 
 {/* <ProductCard/> */}
+<Button onClick = {() => openModal({modalType: "testModal", modalProps: {number:24}  })}>OPEN TEST MODAL</Button>
+<Button onClick = {() => openModal({modalType: "errorModal", modalProps: {error:"Something went wrong!"}  })}>OPEN ERROR MODAL</Button>
+<Button onClick = {() => openModal({modalType: "addressFormModal"  })}>OPEN ADDRESS FORM MODAL</Button>
+
 
     </div>
   );
 };
 
 var actions = {
-    uploadProduct
+    uploadProduct,
+    openModal
 }
 
 export default connect(null,actions)(Test);
